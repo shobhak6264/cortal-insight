@@ -5,7 +5,7 @@ const Dashboard = () => {
         <div>
         <AppBar position="static">
           <Toolbar>
-            <Typography variant="h6">Dashboard</Typography>
+            <Typography variant="h6">Cortal Insight</Typography>
           </Toolbar>
         </AppBar>
         <Typography variant="h4" align="center" gutterBottom>Image Scatter Plot</Typography>

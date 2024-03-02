@@ -47,7 +47,7 @@ export const ImageScatterPlot = () => {
 
   return (
     <div>
-      <svg ref={svgRef} width="100%" height="500px">
+      <svg ref={svgRef} width="100%" height="1000px">
         {imageData.map((image, index) => (
           <LazyLoad key={index} height={50} offset={100}>
             <image
@@ -62,7 +62,7 @@ export const ImageScatterPlot = () => {
           </LazyLoad>
         ))}
       </svg>
-      <ImageModal open={!!selectedImage} onClose={() => setSelectedImage(null)} image={selectedImage} />
+      <ImageModal open={!!selectedImage} onClose={() => setSelectedImage(null)} image={selectedImage}/>
     </div>
   );
 };
@@ -73,6 +73,7 @@ const ImageModal = ({ open, onClose, image }) => {
       <DialogTitle>Image Insights</DialogTitle>
       <DialogContent>
         <DialogContentText>{image?.insights}</DialogContentText>
+        <img src={image && image.url} width="max-content" height="max-content" />
       </DialogContent>
       <DialogActions>
         <Button onClick={onClose} color="primary">Close</Button>
